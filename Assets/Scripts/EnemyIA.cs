@@ -11,12 +11,15 @@ public class EnemyIA : MonoBehaviour
     // To know the player position
     public Transform player;
     bool alert;
+    bool entranceActivated = false;
 
     public float speed = 5f;
 
+    private EnemyEntrance enemyEntrance;
+
     void Start()
     {
-        
+       enemyEntrance = GetComponent<EnemyEntrance>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,14 @@ public class EnemyIA : MonoBehaviour
             Vector3 playerPosition = new Vector3(player.position.x,transform.position.y,player.position.z);
             transform.LookAt(playerPosition);
             transform.position = Vector3.MoveTowards(transform.position, playerPosition, speed*Time.deltaTime);
+            if (!entranceActivated){
+                entranceActivated = true;
+                enemyEntrance.StartTimeline();
+            } 
+            
         }
+
+        
     }
 
     private void OnDrawGizmos(){

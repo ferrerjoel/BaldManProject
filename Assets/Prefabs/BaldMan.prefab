@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4341375193397335668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 989.7006, y: 10.937831, z: 11.052577}
+  m_LocalPosition: {x: 987.27, y: 11.321807, z: 19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -306,6 +306,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -8403890140657788398, guid: 9bc30b616789c3440a9b88b0d9eabb68, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 5952196469076643795, guid: 9bc30b616789c3440a9b88b0d9eabb68, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &4341375193397456199
@@ -322,6 +324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cc: {fileID: 4341375193397456192}
   speed: 5
+  originalSpeed: 0
+  speedRun: 0
   gravity: -9.8
   jumpHeight: 3
   groundCheck: {fileID: 4341375193822756946}
@@ -354,6 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9efcae33eb1964b922d4717342019e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4341375193397456199}
+  audioSource: {fileID: 0}
 --- !u!1 &4341375193397336382
 GameObject:
   m_ObjectHideFlags: 0
