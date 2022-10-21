@@ -1626,7 +1626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4404125507271634965, guid: 75fd00d5e2761c7498d24b07e1790d2a, type: 3}
       propertyPath: speed
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4404125507271634965, guid: 75fd00d5e2761c7498d24b07e1790d2a, type: 3}
       propertyPath: player
