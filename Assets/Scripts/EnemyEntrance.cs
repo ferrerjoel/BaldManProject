@@ -6,6 +6,7 @@ public class EnemyEntrance : MonoBehaviour
 {
 
     private PlayableDirector director;
+    public AudioSource audioSource;
     public GameObject controlPanel;
     public Camera cam1;
     public Camera cam2;
@@ -26,6 +27,7 @@ public class EnemyEntrance : MonoBehaviour
     }
     public void StartTimeline()
     {
+        audioSource.Pause();
         director.Play();
         cam1.enabled = false;
         cam2.enabled = true;
